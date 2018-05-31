@@ -1,10 +1,10 @@
 # group-css-supports
 
-[NPM v1.0.0](https://www.npmjs.com/package/group-css-supports)
+[NPM v1.0](https://www.npmjs.com/package/group-css-supports)
 
-CSS postprocessing: group supports content. Useful for postprocessing preprocessed CSS files.
+> CSS postprocessing: group supports content. Useful for postprocessing preprocessed CSS files.
 
-# What is it?
+## What is it?
 
 You have input.css (take note on similar media query):
 ```css
@@ -71,21 +71,23 @@ The result is output.css:
 }
 ```
 
-Voila!
+## Installing
 
-# Installing
-
-```
+```bash
 # for project
-npm i -S group-css-supports
+$ npm i -S group-css-supports
 
 # or global
-npm i -g group-css-supports
+$ npm i -g group-css-supports
 ```
 
-# Recommendations
+## Recommendations
 * Use `group-css-supports` preprocessor after `group-css-media-queries` preprocessor (see: [GitHub](https://github.com/Se7enSky/group-css-media-queries) or [NPM](https://www.npmjs.com/package/group-css-media-queries), author Ivan Kravchenko)
 * Version for gulp: [GitHub](https://github.com/rozaverta/gulp-group-css-supports) or [NPM](https://www.npmjs.com/package/gulp-group-css-supports)
 
-# Changelog
+## Changelog
 * 1.0.0 – initial working release
+
+## License
+
+[MIT](http://opensource.org/licenses/MIT) © [GoshaV](https://github.com/rozaverta)
