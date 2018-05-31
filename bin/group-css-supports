@@ -1,0 +1,47 @@
+#!/usr/bin/env node
+
+var fs = require('fs');
+var main = require('./../index');
+
+function input(cb)
+{
+	var filename = process.argv[2];
+	if (filename) {
+		if( fs.existsSync(filename) ) {
+			var st = fs.statSync(filename);
+			if(!st.isFile()) {
+				throw new Error("Input path '" + fs.realpathSync(filename) + "' is not file")
+			}
+		}
+		else {
+			throw new Error("Input file not found")
+		}
+		cb(fs.readFileSync(filename, "utf8"));
+	}
+	else {
+		var data = "";
+		process.stdin.resume();
+		process.stdin.setEncoding('utf8');
+
+		process.stdin.on('data', function(chunk) {
+			data += chunk;
+		});
+
+		process.stdin.on('end', function() {
+			cb(data);
+		});
+	}
+}
+
+function output(data) {
+	var outputFilename = process.argv[3];
+	if (outputFilename) {
+		fs.writeFileSync(outputFilename, data);
+	} else {
+		console.log(data);
+	}
+}
+
+input(function(data) {
+	output(main(data));
+});

@@ -1,0 +1,38 @@
+{
+  "name": "group-css-supports",
+  "version": "1.0.0",
+  "description": "CSS postprocessing: group supports",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "css",
+    "group",
+    "media",
+    "supports",
+    "queries",
+    "postprocessing",
+    "postprocessor"
+  ],
+  "bin": {
+    "group-css-supports": "./bin/group-css-supports"
+  },
+  "bugs": {
+    "url": "https://github.com/rozaverta/group-css-supports/issues"
+  },
+  "dependencies": {
+    "css-parse": "^2.0.0",
+    "css-stringify": "^2.0.0"
+  },
+  "homepage": "https://github.com/rozaverta/group-css-supports#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rozaverta/group-css-supports.git"
+  },
+  "author": {
+    "name": "GoshaV [Maniako]",
+    "email": "gosha@rozaverta.com"
+  },
+  "license": "MIT"
+}
